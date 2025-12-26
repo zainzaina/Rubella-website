@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf3e0"/>
+      <stop offset="1" stop-color="#ebded4"/>
+    </linearGradient>
+    <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#base)"/>
+
+  <!-- Soft silk-like waves (lightweight SVG so it loads fast) -->
+  <g opacity="0.35" filter="url(#blur)">
+    <path d="M-100,260 C220,110 520,410 860,250 C1130,120 1320,160 1700,40 L1700,360 L-100,360 Z" fill="#ffffff"/>
+    <path d="M-120,520 C180,360 520,700 880,520 C1140,390 1310,420 1710,300 L1710,640 L-120,640 Z" fill="#ffffff"/>
+    <path d="M-140,820 C160,660 520,980 900,820 C1180,700 1340,730 1720,600 L1720,980 L-140,980 Z" fill="#ffffff"/>
+  </g>
+
+  <g opacity="0.18" filter="url(#blur)">
+    <path d="M-80,120 C260,-40 520,220 880,80 C1180,-50 1350,20 1700,-80 L1700,160 L-80,160 Z" fill="#b08968"/>
+    <path d="M-120,720 C200,560 540,860 920,700 C1190,590 1360,600 1720,500 L1720,820 L-120,820 Z" fill="#7f5539"/>
+  </g>
+</svg>

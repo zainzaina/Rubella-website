@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تواصل معنا - Rubella</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-row">
+        <div class="header-actions">
+          <a class="icon-btn" href="#" data-action="search" aria-label="بحث">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.3-4.3" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="#" data-action="user" aria-label="User">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21a8 8 0 0 0-16 0" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a class="icon-btn cart-badge" href="cart.html" aria-label="السلة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2l1.5 4H20l-2 10H8L6 2z" />
+              <path d="M8 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              <path d="M18 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <span class="badge" id="cart-count">0</span>
+          </a>
+        </div>
+
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/images/logo.png" alt="Rubella Fashion Boutique" loading="eager">
+          <span class="brand-text">
+            <span class="title">RUBELLA</span>
+            <span class="subtitle">fashion boutique</span>
+          </span>
+        </a>
+
+        <div class="header-spacer"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="about.html">من نحن</a>
+        <a href="policies.html">السياسات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </header>
+
+    <h2 class="section-title reveal">تواصل معنا</h2>
+    <div class="surface-paper panel reveal" style="max-width:760px">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
+        <div style="font-weight:900;color:var(--accent)">الواتساب</div>
+        <div style="font-weight:900;color:var(--maroon)">+962 7XXXXXXXX</div>
+      </div>
+    </div>
+
+    <form class="surface panel reveal" style="max-width:760px;margin-top:14px" onsubmit="event.preventDefault();alert('تم إرسال الرسالة (نموذج تجريبي)')">
+      <label>الاسم<input required type="text"></label>
+      <label>البريد الإلكتروني<input required type="email"></label>
+      <label>الرسالة<textarea required rows="4"></textarea></label>
+      <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" type="submit">إرسال</button>
+        <a class="btn btn-secondary" href="shop.html">تسوق الآن</a>
+      </div>
+    </form>
+
+    <h3 class="section-title reveal">تابعنا</h3>
+    <div class="surface panel reveal" style="max-width:760px;display:flex;gap:12px;flex-wrap:wrap">
+      <a class="btn btn-secondary" href="#">انستجرام</a>
+      <a class="btn btn-secondary" href="#">فيسبوك</a>
+    </div>
+
+    <footer class="site-footer"><div class="copyright">© 2025 Rubella Fashion Boutique</div></footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

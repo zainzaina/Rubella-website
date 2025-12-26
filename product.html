@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>عرض المنتج - Rubella</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-row">
+        <div class="header-actions">
+          <a class="icon-btn" href="#" data-action="search" aria-label="بحث">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.3-4.3" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="#" data-action="user" aria-label="User">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21a8 8 0 0 0-16 0" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a class="icon-btn cart-badge" href="cart.html" aria-label="السلة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2l1.5 4H20l-2 10H8L6 2z" />
+              <path d="M8 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              <path d="M18 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <span class="badge" id="cart-count">0</span>
+          </a>
+        </div>
+
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/images/logo.png" alt="Rubella Fashion Boutique" loading="eager">
+          <span class="brand-text">
+            <span class="title">RUBELLA</span>
+            <span class="subtitle">fashion boutique</span>
+          </span>
+        </a>
+
+        <div class="header-spacer"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="about.html">من نحن</a>
+        <a href="policies.html">السياسات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </header>
+
+    <h2 class="section-title reveal" style="margin-top:18px">عرض المنتج</h2>
+
+    <main id="product-root" class="product-layout" style="margin-top:10px">
+      <section class="surface product-gallery reveal">
+        <div class="product-media">
+          <img id="product-image" src="" alt="" style="height:520px">
+        </div>
+        <div id="product-thumbs" class="thumbs"></div>
+      </section>
+
+      <aside class="surface panel reveal">
+        <div id="product-name" style="font-family:'Tan Pearl',serif;color:var(--accent);font-size:34px;line-height:1.1"></div>
+        <div id="product-price" class="price" style="margin-top:8px;font-size:18px"></div>
+        <p id="product-desc" class="muted" style="margin-top:10px"></p>
+
+        <div class="divider"></div>
+
+        <div>
+          <div style="font-weight:900;color:var(--accent)">المقاس</div>
+          <div id="product-sizes" class="option-row" data-pill-group></div>
+        </div>
+
+        <div style="margin-top:12px">
+          <label>اللون
+            <select id="product-colors"></select>
+          </label>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+          <a id="add-to-cart-btn" class="btn" href="cart.html">أضف إلى السلة</a>
+          <a class="btn btn-secondary" href="shop.html">متابعة التسوق</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <h3 class="panel-title">جدول القياسات</h3>
+        <div class="surface-paper" style="padding:10px;border-radius:14px">
+          <table style="width:100%;border-collapse:collapse">
+            <tr><td style="padding:8px;font-weight:900;color:var(--accent)">مقاس</td><td style="padding:8px;font-weight:900;color:var(--accent)">الطول</td><td style="padding:8px;font-weight:900;color:var(--accent)">الصدر</td></tr>
+            <tr><td style="padding:8px">S</td><td style="padding:8px">110cm</td><td style="padding:8px">88cm</td></tr>
+            <tr><td style="padding:8px">M</td><td style="padding:8px">115cm</td><td style="padding:8px">92cm</td></tr>
+            <tr><td style="padding:8px">L</td><td style="padding:8px">120cm</td><td style="padding:8px">98cm</td></tr>
+          </table>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer"><div class="copyright">© 2025 Rubella Fashion Boutique</div></footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

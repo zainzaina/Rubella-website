@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>المتجر - Rubella</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-row">
+        <div class="header-actions">
+          <a class="icon-btn" href="#" data-action="search" aria-label="بحث">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.3-4.3" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="#" data-action="user" aria-label="User">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21a8 8 0 0 0-16 0" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a class="icon-btn cart-badge" href="cart.html" aria-label="السلة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2l1.5 4H20l-2 10H8L6 2z" />
+              <path d="M8 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              <path d="M18 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <span class="badge" id="cart-count">0</span>
+          </a>
+        </div>
+
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/images/logo.png" alt="Rubella Fashion Boutique" loading="eager">
+          <span class="brand-text">
+            <span class="title">RUBELLA</span>
+            <span class="subtitle">fashion boutique</span>
+          </span>
+        </a>
+
+        <div class="header-spacer"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html#new">وصل حديثاً</a>
+        <a href="shop.html#dresses">الفساتين</a>
+        <a href="shop.html#abayas">العبايات</a>
+        <a href="shop.html#modest">ملابس محتشمة</a>
+        <a href="shop.html#accessories">اكسسوارات</a>
+        <a href="shop.html#sale">تخفيضات</a>
+        <a href="about.html">من نحن</a>
+        <a href="policies.html">السياسات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </nav>
+    </header>
+
+    <h2 class="section-title reveal">المتجر</h2>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="filters surface-paper panel reveal">
+          <h3 class="panel-title">الفلاتر</h3>
+          <label>القياس
+            <select id="filter-size">
+              <option value="all">كل المقاسات</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+          </label>
+          <label>اللون
+            <select id="filter-color">
+              <option value="all">الكل</option>
+              <option value="بني">بني</option>
+              <option value="بيج">بيج</option>
+              <option value="أسود">أسود</option>
+              <option value="خمري">خمري</option>
+              <option value="عاجي">عاجي</option>
+            </select>
+          </label>
+          <label>السعر
+            <input id="filter-price" type="range" min="10" max="500" value="500" oninput="document.getElementById('filter-price-value').textContent=this.value">
+            <span id="filter-price-value">500</span>
+          </label>
+          <div style="margin-top:10px">
+            <button class="btn" type="button" onclick="applyFilters()">تطبيق</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <div class="surface panel reveal" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div style="font-weight:900;color:var(--accent)">كل المنتجات</div>
+          <div style="min-width:220px">
+            <label style="margin:0">ترتيب
+              <select id="sort-select" onchange="applyFilters()">
+                <option value="newest">الأحدث</option>
+                <option value="price_asc">الأقل سعراً</option>
+                <option value="price_desc">الأعلى سعراً</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div id="shop-grid" class="grid" style="margin-top:16px"></div>
+      </main>
+    </div>
+
+    <footer class="site-footer"><div class="copyright">© 2025 Rubella Fashion Boutique</div></footer>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Rubella Fashion Boutique — الصفحة الرئيسية</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-row">
+        <div class="header-actions">
+          <a class="icon-btn" href="#" data-action="search" aria-label="بحث">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.3-4.3" />
+            </svg>
+          </a>
+          <a class="icon-btn" href="#" data-action="user" aria-label="User">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21a8 8 0 0 0-16 0" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+          </a>
+          <a class="icon-btn cart-badge" href="cart.html" aria-label="السلة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2l1.5 4H20l-2 10H8L6 2z" />
+              <path d="M8 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              <path d="M18 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+            </svg>
+            <span class="badge" id="cart-count">0</span>
+          </a>
+        </div>
+
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/images/logo.png" alt="Rubella Fashion Boutique" loading="eager">
+          <span class="brand-text">
+            <span class="title">RUBELLA</span>
+            <span class="subtitle">fashion boutique</span>
+          </span>
+        </a>
+
+        <div class="header-spacer"></div>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="about.html">من نحن</a>
+        <a href="policies.html">السياسات</a>
+        <a href="contact.html">تواصل معنا</a>
+        <a href="shop.html#new">وصل حديثاً</a>
+        <a href="shop.html#dresses">الفساتين</a>
+        <a href="shop.html#abayas">العبايات</a>
+        <a href="shop.html#modest">ملابس محتشمة</a>
+        <a href="shop.html#accessories">اكسسوارات</a>
+        <a href="shop.html#sale">تخفيضات</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card surface reveal">
+        <div class="hero-inner">
+          <div>
+            <h1>تشكيلة الموسم</h1>
+            <p>قصّات راقية، أقمشة فاخرة، وتفاصيل ناعمة تعكس أسلوب Rubella. اختاري إطلالتك القادمة بسهولة.</p>
+          </div>
+          <div class="hero-cta">
+            <a class="btn" href="shop.html">تسوق الآن</a>
+            <a class="btn btn-secondary" href="policies.html">سياسات المتجر</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="features">
+      <div class="feature reveal"><strong>توصيل سريع</strong><div>خدمة توصيل موثوقة وسرعة في الإنجاز</div></div>
+      <div class="feature reveal"><strong>دفع عند الاستلام</strong><div>اختيار مناسب لعملائنا</div></div>
+      <div class="feature reveal"><strong>تبديل مجاني</strong><div>استبدال خلال 14 يوم</div></div>
+    </div>
+
+    <h2 class="section-title reveal">منتجات مختارة</h2>
+    <div class="grid">
+      <div class="product-card reveal">
+        <div class="product-media">
+          <img src="assets/images/classic abaya.jpg" alt="عباية كلاسيك" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-name">عباية كلاسيك</div>
+          <div class="price">120.00 JD</div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-secondary" href="product.html?id=p1">عرض</a>
+            <a class="btn" href="cart.html" onclick="addToCart('p1','عباية كلاسيك',120)">أضف إلى السلة</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-media">
+          <img src="assets/images/satin dress.jpg" alt="فستان ساتان" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-name">فستان ساتان</div>
+          <div class="price">199.00 JD</div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-secondary" href="product.html?id=p2">عرض</a>
+            <a class="btn" href="cart.html" onclick="addToCart('p2','فستان ساتان',199)">أضف إلى السلة</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card reveal">
+        <div class="product-media">
+          <img src="assets/images/silk shirt.jpg" alt="قميص حرير" loading="lazy">
+        </div>
+        <div class="product-body">
+          <div class="product-name">قميص حرير</div>
+          <div class="price">120.00 JD</div>
+          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-secondary" href="product.html?id=p3">عرض</a>
+            <a class="btn" href="cart.html" onclick="addToCart('p3','قميص حرير',120)">أضف إلى السلة</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="copyright">© 2025 Rubella Fashion Boutique</div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
