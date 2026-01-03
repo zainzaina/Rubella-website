@@ -360,3 +360,45 @@ footer.site-footer{padding:24px 0;margin-top:40px;border-top:1px solid rgba(0,0,
   .cart-layout{grid-template-columns:1fr 320px}
   .checkout-layout{grid-template-columns:1fr 340px}
 }
+/* ===========================
+   FONT PREVIEW (ADDED ONLY)
+   =========================== */
+
+.font-preview{
+  display:flex;
+  gap:60px;
+  justify-content:center;
+  align-items:center;
+  margin:40px 0;
+}
+
+.font-preview .english-font,
+.font-preview .arabic-font{
+  text-align:center;
+  color:var(--accent);
+}
+
+.font-preview .english-font .label{
+  font-family:'Tan Pearl', serif;
+  font-size:14px;
+  letter-spacing:1px;
+  margin-bottom:6px;
+}
+
+.font-preview .english-font .name{
+  font-family:'Tan Pearl', serif;
+  font-size:22px;
+  letter-spacing:2px;
+}
+
+.font-preview .arabic-font .label{
+  font-family:'Barada Reqa','Noto Naskh Arabic',serif;
+  font-size:14px;
+  margin-bottom:6px;
+}
+
+.font-preview .arabic-font .name{
+  font-family:'Barada Reqa','Noto Naskh Arabic',serif;
+  font-size:22px;
+}
+
