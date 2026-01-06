@@ -153,6 +153,7 @@ header.site-header{
 }
 .icon-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,0.86);box-shadow:0 10px 22px rgba(0,0,0,0.08)}
 .icon-btn svg{width:18px;height:18px}
+.menu-btn{display:none}
 .cart-badge{
   position:relative;
 }
@@ -196,6 +197,8 @@ header.site-header{
   box-shadow:var(--shadow-md);
   padding:18px;
   animation:overlayIn .18s ease both;
+  max-height:calc(100dvh - 124px);
+  overflow:auto;
 }
 @keyframes overlayIn{from{opacity:0;transform:translateX(-50%) translateY(18px)}to{opacity:1;transform:translateX(-50%) translateY(10px)}}
 .overlay-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
@@ -228,6 +231,10 @@ header.site-header{
 .user-meta .u{font-weight:900;color:var(--accent)}
 .user-meta .s{font-size:12px;color:var(--muted);margin-top:2px}
 .user-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+
+.menu-list{display:grid;gap:10px}
+.menu-list a{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 12px;border-radius:16px;border:var(--border-soft);background:rgba(255,255,255,0.66);text-decoration:none;color:var(--accent);font-weight:900}
+.menu-list a:hover{background:rgba(255,255,255,0.92)}
 
 .nav{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:10px;position:relative;padding-left:72px;min-height:54px}
 .nav a{color:var(--dark);text-decoration:none;font-weight:700;letter-spacing:.2px;position:relative;padding:6px 8px;border-radius:10px;transition:background .15s ease,color .15s ease;flex:0 0 auto}
@@ -263,6 +270,7 @@ header.site-header{
 .product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);background:rgba(255,255,255,0.84)}
 .product-media{position:relative;overflow:hidden;border-radius:18px;background:rgba(235,222,212,0.65);border:var(--border-soft)}
 .product-media img{width:100%;height:290px;object-fit:cover;display:block;transform:scale(1);transition:transform .35s ease}
+.product-gallery .product-media img{height:520px}
 .product-card:hover .product-media img{transform:scale(1.05)}
 .product-body{padding:12px 6px 6px}
 .product-name{font-weight:800;margin:6px 0;color:var(--accent)}
@@ -341,10 +349,8 @@ footer.site-footer{padding:24px 0;margin-top:40px;border-top:1px solid rgba(0,0,
   .header-spacer{display:none}
   .brand{min-width:auto;align-items:flex-start}
   .header-actions{min-width:auto}
-  .nav{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:12px;padding:6px 2px;position:static;min-height:auto;padding-left:2px}
-  .nav .nav-logo{position:static;left:auto;top:auto;transform:none;width:46px;height:46px}
-  .nav .nav-logo img{height:34px}
-  .nav::-webkit-scrollbar{height:0}
+  .menu-btn{display:inline-flex}
+  .nav{display:none}
   .features{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
   .layout{flex-direction:column}
@@ -353,6 +359,10 @@ footer.site-footer{padding:24px 0;margin-top:40px;border-top:1px solid rgba(0,0,
   .cart-layout{grid-template-columns:1fr}
   .checkout-layout{grid-template-columns:1fr}
   .form-grid{grid-template-columns:1fr}
+  .product-media img{height:auto;min-height:240px;max-height:62vh;object-fit:cover}
+  .thumbs img{width:70px;height:70px}
+  .icon-btn{width:44px;height:44px}
+  .overlay-panel{top:72px;width:calc(100% - 24px);max-height:calc(100dvh - 96px)}
 }
 
 @media(min-width:701px) and (max-width:1024px){
@@ -400,5 +410,350 @@ footer.site-footer{padding:24px 0;margin-top:40px;border-top:1px solid rgba(0,0,
 .font-preview .arabic-font .name{
   font-family:'Barada Reqa','Noto Naskh Arabic',serif;
   font-size:22px;
+}
+/* =========================
+   ANDROID / MOBILE SUPPORT
+   ========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  /* الهيدر */
+  .header-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand-text .title {
+    font-size: 18px;
+  }
+
+  .brand-text .subtitle {
+    font-size: 12px;
+  }
+
+  /* الناف بار */
+  .nav {
+    display: none;
+  }
+
+  .menu-btn{
+    display: inline-flex;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  /* الهيرو */
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* المنتجات */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-card {
+    border-radius: 14px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  /* الأزرار */
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+/* ======================================
+   ANDROID / MOBILE FULL FIX
+   ====================================== */
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* صور */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= HEADER ================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--surface, #f7efe6);
+  }
+
+  .header-row {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: auto;
+  }
+
+  .brand-text .title {
+    font-size: 18px;
+  }
+
+  .brand-text .subtitle {
+    font-size: 12px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .icon-btn {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+
+  .menu-btn{display:inline-flex}
+
+  .nav{display:none}
+
+}
+
+/* ================= HERO ================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 16px 0;
+  }
+
+  .hero-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-cta {
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+}
+
+/* ================= FEATURES ================= */
+
+@media (max-width: 768px) {
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .feature {
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+}
+
+/* ================= PRODUCTS ================= */
+
+@media (max-width: 768px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-card {
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .product-media img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  .product-body {
+    padding: 14px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .product-body .btn {
+    width: 100%;
+  }
+
+}
+
+/* ================= BUTTONS ================= */
+
+@media (max-width: 768px) {
+
+  .btn {
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 999px;
+  }
+
+  .btn-secondary {
+    opacity: 0.9;
+  }
+
+}
+
+/* ================= FOOTER ================= */
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    font-size: 13px;
+    text-align: center;
+  }
+
+}
+
+/* ================= PRELOADER ================= */
+
+@media (max-width: 768px) {
+
+  .preloader-inner {
+    transform: scale(0.9);
+  }
+
+}
+/* ================= HEADER RTL FIX (MOBILE) ================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+  }
+
+  /* الأيقونات */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+  }
+
+  /* اللوجو */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    width: 38px;
+    height: auto;
+  }
+
+  .brand-text {
+    line-height: 1.1;
+  }
+
+  .brand-text .title {
+    font-size: 17px;
+  }
+
+  .brand-text .subtitle {
+    font-size: 11px;
+  }
+
 }
 

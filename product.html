@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>عرض المنتج - Rubella</title>
@@ -11,6 +13,13 @@
     <header class="site-header">
       <div class="header-row">
         <div class="header-actions">
+          <a class="icon-btn menu-btn" href="#" data-action="menu" aria-label="القائمة">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h16" />
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+            </svg>
+          </a>
           <a class="icon-btn" href="#" data-action="search" aria-label="بحث">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="11" cy="11" r="8" />
@@ -61,7 +70,7 @@
     <main id="product-root" class="product-layout" style="margin-top:10px">
       <section class="surface product-gallery reveal">
         <div class="product-media">
-          <img id="product-image" src="" alt="" style="height:520px">
+          <img id="product-image" src="" alt="">
         </div>
         <div id="product-thumbs" class="thumbs"></div>
       </section>

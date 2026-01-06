@@ -324,6 +324,23 @@ function ensureHeaderOverlays(){
   if(document.getElementById('search-overlay')) return;
 
   const tpl=`
+  <div class="overlay" id="menu-overlay" data-open="false" aria-hidden="true">
+    <div class="overlay-backdrop" data-overlay-backdrop></div>
+    <div class="overlay-panel" role="dialog" aria-modal="true" aria-label="القائمة">
+      <div class="overlay-head">
+        <h3 class="overlay-title">القائمة</h3>
+        <button class="overlay-close" type="button" data-overlay-close aria-label="إغلاق">✕</button>
+      </div>
+      <div class="menu-list">
+        <a href="index.html">الرئيسية</a>
+        <a href="shop.html">المتجر</a>
+        <a href="about.html">من نحن</a>
+        <a href="policies.html">السياسات</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+
   <div class="overlay" id="search-overlay" data-open="false" aria-hidden="true">
     <div class="overlay-backdrop" data-overlay-backdrop></div>
     <div class="overlay-panel" role="dialog" aria-modal="true" aria-label="بحث">
@@ -411,11 +428,20 @@ function renderSearchResults(query){
 function initHeaderOverlays(){
   ensureHeaderOverlays();
 
+  const menuOverlay=document.getElementById('menu-overlay');
   const searchOverlay=document.getElementById('search-overlay');
   const userOverlay=document.getElementById('user-overlay');
   const searchInput=document.getElementById('search-input');
 
-  const closeAll=()=>{setOverlayOpen(searchOverlay,false);setOverlayOpen(userOverlay,false)};
+  const closeAll=()=>{setOverlayOpen(menuOverlay,false);setOverlayOpen(searchOverlay,false);setOverlayOpen(userOverlay,false)};
+
+  document.querySelectorAll('[data-action="menu"]').forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+      e.preventDefault();
+      closeAll();
+      setOverlayOpen(menuOverlay,true);
+    });
+  });
 
   document.querySelectorAll('[data-action="search"]').forEach(btn=>{
     btn.addEventListener('click',(e)=>{
@@ -438,6 +464,10 @@ function initHeaderOverlays(){
   document.querySelectorAll('[data-overlay-close]').forEach(b=>b.addEventListener('click',()=>closeAll()));
   document.querySelectorAll('[data-overlay-backdrop]').forEach(b=>b.addEventListener('click',()=>closeAll()));
   document.querySelectorAll('[data-user-close]').forEach(b=>b.addEventListener('click',(e)=>{e.preventDefault();closeAll()}));
+
+  if(menuOverlay){
+    menuOverlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeAll()));
+  }
 
   if(searchInput){
     searchInput.addEventListener('input',()=>renderSearchResults(searchInput.value));
