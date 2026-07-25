@@ -1,40 +1,117 @@
-https://zainzaina.github.io/Rubella-website/
----------------------------------------------------------------
-# Rubella Fashion Boutique
+<div align="center">
 
-Rubella هو موقع إلكتروني لعرض وبيع الملابس النسائية، يركز على الأزياء العصرية والمحتشمة مثل الفساتين، العبايات، الأطقم، والإكسسوارات.  
-الموقع مصمم ليكون بسيط، سريع، وسهل التصفح من أي جهاز.
+# 👗 Rubella Fashion Boutique
 
-## فكرة الموقع
+### Modern Fashion E-Commerce Website
 
-الفكرة من الموقع هي توفير تجربة تسوق أنيقة وسهلة للعميلات، مع عرض أحدث التشكيلات، الأسعار، ومعلومات التوصيل بطريقة واضحة ومنظمة.
+<img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" width="650"/>
 
-## محتوى الموقع
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/Hosted-GitHub%20Pages-black?style=for-the-badge&logo=github)
 
-الموقع يحتوي على:
+### 🌐 Live Website
 
-- الصفحة الرئيسية لعرض التشكيلة المميزة.
-- أقسام للمنتجات المختلفة (فساتين، عبايات، أطقم، إكسسوارات).
-- صفحة "من نحن" للتعريف بالمتجر.
-- صفحة سياسات المتجر والشحن.
-- صفحة تواصل مع المتجر.
-- واجهة سلة مشتريات لعرض المنتجات المختارة.
-
-## الجمهور المستهدف
-
-النساء الباحثات عن ملابس أنيقة وعصرية بجودة جيدة وأسعار مناسبة، مع تجربة تسوق مريحة عبر الإنترنت.
-
-## هدف المشروع
-
-- إنشاء واجهة متجر إلكتروني بسيطة وفعالة.
-- تحسين تجربة المستخدم في استعراض المنتجات.
-- تقديم تصميم عصري يناسب متجر أزياء نسائي.
-
-## المعاينة المباشرة
-
-يمكن زيارة الموقع عبر الرابط التالي:  
 https://zainzaina.github.io/Rubella-website/
 
-## ملاحظات
+</div>
 
-هذا المشروع واجهة أمامية فقط (Front-End) لأغراض العرض والتطوير، ولا يحتوي على نظام دفع حقيقي أو قاعدة بيانات في الوقت الحالي.
+---
+
+# 🛍 About
+
+Rubella Fashion Boutique is a modern online fashion website designed to showcase women's clothing and accessories with an elegant, responsive, and user-friendly interface.
+
+The website focuses on simplicity, fast navigation, and an enjoyable shopping experience across desktop and mobile devices.
+
+---
+
+# ✨ Features
+
+- 🏠 Home Page
+- 👗 Dresses Collection
+- 🧕 Abayas Collection
+- 💎 Accessories
+- 👠 Fashion Sets
+- 🛒 Shopping Cart
+- 👩 About Us
+- 📞 Contact Page
+- 🚚 Shipping Information
+- 📱 Fully Responsive Design
+
+---
+
+# 🖥 Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages
+
+
+
+---
+
+# 🚀 Live Demo
+
+👉 https://zainzaina.github.io/Rubella-website/
+
+---
+
+# 📂 Project Structure
+
+```
+Rubella-website
+│
+├── index.html
+├── products.html
+├── about.html
+├── contact.html
+├── cart.html
+├── css/
+├── js/
+├── images/
+└── assets/
+```
+
+---
+
+# 🎯 Project Goals
+
+- Build a modern fashion website.
+- Create a clean shopping experience.
+- Practice responsive web design.
+- Improve front-end development skills.
+
+---
+
+# 🌟 Highlights
+
+✔ Elegant User Interface
+
+✔ Responsive Layout
+
+✔ Fast Navigation
+
+✔ Mobile Friendly
+
+✔ Organized Product Categories
+
+✔ Shopping Cart Interface
+
+---
+
+# 👨‍💻 Developer
+
+**Zain Abuzaid**
+
+GitHub:
+
+https://github.com/zainzaina
+
+---
+
+# ⭐ Support
+
+If you like this project, please leave a ⭐ on GitHub!
